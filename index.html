@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anaxus</title>
   <style>
     /* Reset CSS */
@@ -42,6 +42,7 @@
       color: white;
       font-size: 1rem;
       transition: color 0.3s;
+      cursor: pointer;
     }
 
     nav ul li a:hover {
@@ -49,7 +50,8 @@
     }
 
     /* Section Styles */
-    section {
+    .section {
+      display: none;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -62,18 +64,10 @@
       padding: 20px;
     }
 
-    section h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    .active {
+      display: flex;
     }
 
-    section p {
-      font-size: 1.2rem;
-      margin: 10px 0;
-      max-width: 800px;
-    }
-
-    /* Form Styles */
     form {
       display: flex;
       flex-direction: column;
@@ -101,32 +95,38 @@
       background-color: #1f6feb;
     }
   </style>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
 </head>
-<body>
+<body onload="showSection('home')">
   <!-- Navigation Bar -->
   <nav>
     <div class="logo">Anaxus</div>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a onclick="showSection('home')">Home</a></li>
+      <li><a onclick="showSection('about')">About</a></li>
+      <li><a onclick="showSection('services')">Services</a></li>
+      <li><a onclick="showSection('contact')">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Home Section -->
-  <section id="home">
+  <section id="home" class="section">
     <h1>Welcome to Anaxus</h1>
     <p>Your trusted partner in technology. We are here to provide solutions for all your tech needs.</p>
   </section>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" class="section">
     <h1>About Us</h1>
     <p>
-      At Anaxus, we specialize in comprehensive tech support services. Whether you need help with network setup, 
-      computer troubleshooting, hardware repair, software installation, or advanced IT consulting—we do it all! 
-      Our experts are ready to handle any tech-related challenge you throw at us.
+      At Anaxus, we specialize in comprehensive tech support services. Whether you need help with network setup,
+      computer troubleshooting, hardware repair, software installation, or advanced IT consulting—we do it all!
     </p>
     <p>
       From personal tech support to enterprise-level solutions, Anaxus is here to meet your needs and exceed your expectations.
@@ -134,9 +134,9 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services">
+  <section id="services" class="section">
     <h1>Schedule an Appointment</h1>
-    <form action="https://formspree.io/f/myform" method="POST">
+    <form action="https://formspree.io/f/your-form-id" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="4" placeholder="Describe your tech issue or request" required></textarea>
@@ -145,7 +145,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="section">
     <h1>Contact Us</h1>
     <p>If you have any questions or need further assistance, feel free to reach out to us:</p>
     <p>Email: <a href="mailto:vance@anaxus.tech" style="color: #58a6ff;">vance@anaxus.tech</a></p>
