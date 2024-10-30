@@ -1,3 +1,18 @@
+/* Prevent body from scrolling unless needed */
+html, body {
+  height: 100%;      /* Ensure the body fills the entire viewport */
+  overflow: hidden;  /* Disable scrolling on the body unless necessary */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the content area can scroll when needed */
+#content {
+  flex: 1;
+  overflow-y: auto; /* Allow vertical scrolling if the content overflows */
+  height: 100vh;    /* Ensure the content div fills the viewport */
+}
+
 /* Reset CSS */
 * {
   margin: 0;
@@ -16,11 +31,13 @@ nav {
   font-family: Arial, sans-serif;
 }
 
+/* Logo inside Navbar */
 nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* Navbar Links */
 nav ul {
   list-style-type: none;
   display: flex;
@@ -41,18 +58,17 @@ nav ul li a:hover {
   color: #58a6ff;
 }
 
-/* Section Styles */
+/* Content Section Styles */
 .section {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #0d1117;
   color: white;
-  font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
+  min-height: 100vh; /* Ensure the section fills the screen height */
 }
 
 /* Loading Indicator Styles */
@@ -65,6 +81,7 @@ nav ul li a:hover {
   color: #58a6ff;
 }
 
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
