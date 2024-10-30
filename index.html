@@ -5,20 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anaxus</title>
   <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background-color: #0d1117;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #58a6ff;
+    }
+
+    /* Centered Content Styles */
     body {
       margin: 0;
       height: 100vh;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
       background-color: #0d1117;
       color: white;
       font-family: Arial, sans-serif;
-      font-size: 4rem;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
     }
   </style>
 </head>
 <body>
-  Anaxus
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Anaxus</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div>Welcome to Anaxus</div>
+  </main>
 </body>
 </html>
