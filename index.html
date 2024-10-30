@@ -48,9 +48,8 @@
       color: #58a6ff;
     }
 
-    /* Centered Content Styles */
-    body {
-      margin: 0;
+    /* Section Styles */
+    section {
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -59,14 +58,47 @@
       background-color: #0d1117;
       color: white;
       font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
     }
 
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    section h1 {
       font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      max-width: 800px;
+    }
+
+    /* Form Styles */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 300px;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #58a6ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #1f6feb;
     }
   </style>
 </head>
@@ -82,9 +114,41 @@
     </ul>
   </nav>
 
-  <!-- Main Content -->
-  <main>
-    <div>Welcome to Anaxus</div>
-  </main>
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Anaxus</h1>
+    <p>Your trusted partner in technology. We are here to provide solutions for all your tech needs.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h1>About Us</h1>
+    <p>
+      At Anaxus, we specialize in comprehensive tech support services. Whether you need help with network setup, 
+      computer troubleshooting, hardware repair, software installation, or advanced IT consulting—we do it all! 
+      Our experts are ready to handle any tech-related challenge you throw at us.
+    </p>
+    <p>
+      From personal tech support to enterprise-level solutions, Anaxus is here to meet your needs and exceed your expectations.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h1>Schedule an Appointment</h1>
+    <form action="https://formspree.io/f/myform" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Describe your tech issue or request" required></textarea>
+      <button type="submit">Schedule Appointment</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or need further assistance, feel free to reach out to us:</p>
+    <p>Email: <a href="mailto:vance@anaxus.tech" style="color: #58a6ff;">vance@anaxus.tech</a></p>
+  </section>
 </body>
 </html>
