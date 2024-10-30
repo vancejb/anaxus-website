@@ -1,9 +1,13 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
 /* Prevent body from scrolling unless needed */
 html, body {
   height: 100%;      /* Ensure the body fills the entire viewport */
   overflow: hidden;  /* Disable scrolling on the body unless necessary */
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;  /* Use Inter font for the entire site */
 }
 
 /* Ensure the content area can scroll when needed */
@@ -28,13 +32,12 @@ nav {
   justify-content: space-between;
   padding: 10px 20px;
   color: white;
-  font-family: Arial, sans-serif;
 }
 
 /* Logo inside Navbar */
 nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700; /* Slightly bolder to emphasize the brand */
 }
 
 /* Navbar Links */
@@ -50,7 +53,8 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
@@ -96,6 +100,7 @@ form input, form textarea, form button {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: 'Inter', sans-serif;  /* Ensure the form uses the same font */
 }
 
 form button {
@@ -103,6 +108,7 @@ form button {
   color: white;
   border: none;
   cursor: pointer;
+  font-weight: 500;
 }
 
 form button:hover {
