@@ -3,18 +3,25 @@
 
 /* Prevent body from scrolling unless needed */
 html, body {
-  height: 100%;      /* Ensure the body fills the entire viewport */
-  overflow: hidden;  /* Disable scrolling on the body unless necessary */
+  height: 100%;
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;  /* Use Inter font for the entire site */
+  font-family: 'Inter', sans-serif;
+  background-color: #0d1117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Ensure the content area can scroll when needed */
 #content {
   flex: 1;
-  overflow-y: auto; /* Allow vertical scrolling if the content overflows */
-  height: 100vh;    /* Ensure the content div fills the viewport */
+  overflow-y: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Reset CSS */
@@ -32,12 +39,15 @@ nav {
   justify-content: space-between;
   padding: 10px 20px;
   color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 /* Logo inside Navbar */
 nav .logo {
   font-size: 1.8rem;
-  font-weight: 700; /* Slightly bolder to emphasize the brand */
+  font-weight: 700;
 }
 
 /* Navbar Links */
@@ -50,29 +60,53 @@ nav ul li {
   margin-left: 20px;
 }
 
+/* White box styling for navigation links */
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #0d1117;
+  padding: 8px 15px;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #58a6ff;
+  color: white;
+  background-color: #58a6ff;
 }
 
-/* Content Section Styles */
+/* Content Section Styles with white rectangle box */
 .section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0d1117;
-  color: white;
   text-align: center;
+  width: 80%;
+  max-width: 700px;
   padding: 20px;
-  min-height: 100vh; /* Ensure the section fills the screen height */
+  margin-top: 60px; /* Offset for fixed navbar */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 15px;
 }
 
 /* Loading Indicator Styles */
@@ -100,7 +134,7 @@ form input, form textarea, form button {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: 'Inter', sans-serif;  /* Ensure the form uses the same font */
+  font-family: 'Inter', sans-serif;
 }
 
 form button {
