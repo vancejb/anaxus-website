@@ -34,10 +34,15 @@ nav {
   color: white;
 }
 
-/* Logo inside Navbar */
+* Logo inside Navbar */
 nav .logo {
   font-size: 1.8rem;
-  font-weight: 700; /* Slightly bolder to emphasize the brand */
+  font-weight: 700;       /* Slightly bolder to emphasize the brand */
+  color: white;           /* Ensures the text color is white */
+  padding: 5px 10px;      /* Adds space inside the box for a balanced look */
+  border: 2px solid white; /* Creates a 2px white outline box */
+  border-radius: 5px;     /* Adds a slight rounding to the box corners */
+  display: inline-block;  /* Ensures the border wraps tightly around the text */
 }
 
 /* Navbar Links */
