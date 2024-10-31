@@ -125,3 +125,28 @@ form button {
 form button:hover {
   background-color: #1f6feb;
 }
+
+/* About Us Section Styling */
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#about h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00a896; /* Customize color as desired */
+}
+
+#about p {
+  max-width: 600px; /* Limits line length for readability */
+  margin: 15px auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #e0f7fa; /* Customize color as desired */
+}
