@@ -34,7 +34,7 @@ nav {
   color: white;
 }
 
-* Logo inside Navbar */
+/* Logo inside Navbar */
 nav .logo {
   font-size: 1.8rem;
   font-weight: 700;       /* Slightly bolder to emphasize the brand */
