@@ -8,10 +8,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #0d1117;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #0d1117; /* Maintain the background color across the whole page */
 }
 
 /* Ensure the content area can scroll when needed */
@@ -31,7 +28,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Navbar Styles */
+/* Navbar Styles (no changes to buttons) */
 nav {
   background-color: #0d1117;
   display: flex;
@@ -44,13 +41,11 @@ nav {
   top: 0;
 }
 
-/* Logo inside Navbar */
 nav .logo {
   font-size: 1.8rem;
   font-weight: 700;
 }
 
-/* Navbar Links */
 nav ul {
   list-style-type: none;
   display: flex;
@@ -60,53 +55,51 @@ nav ul li {
   margin-left: 20px;
 }
 
-/* White box styling for navigation links */
 nav ul li a {
   text-decoration: none;
-  color: #0d1117;
-  padding: 8px 15px;
+  color: white;
   font-size: 1.1rem;
   font-weight: 500;
-  border-radius: 5px;
-  background-color: white;
-  transition: all 0.3s ease;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: white;
-  background-color: #58a6ff;
+  color: #58a6ff;
 }
 
-/* Content Section Styles with white rectangle box */
+/* Content Section Styles with white outline around text */
 .section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 80%;
   max-width: 700px;
+  width: 80%;
   padding: 20px;
   margin-top: 60px; /* Offset for fixed navbar */
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-  transition: background-color 0.3s ease;
 }
 
+/* White outline box around section text */
+.section h1, .section p {
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
+  border: 2px solid white;  /* White outline box */
+  border-radius: 8px;       /* Rounded corners for the box */
+  display: inline-block;    /* Keeps the box only around the text */
+  line-height: 1.6;
+}
+
+/* Heading and Paragraph Styling */
 .section h1 {
   font-size: 2rem;
   font-weight: 700;
-  color: white;
-  margin-bottom: 15px;
 }
 
 .section p {
   font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.6;
-  color: white;
-  margin-bottom: 15px;
 }
 
 /* Loading Indicator Styles */
