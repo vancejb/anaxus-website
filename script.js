@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  loadContent('home'); // Load the Home section by default on page load
+  // Retrieve the last active tab from localStorage, default to 'home' if not set
+  const lastSection = localStorage.getItem('activeSection') || 'home';
+  loadContent(lastSection); // Load the last section on page load
 
   const links = document.querySelectorAll('nav a');
   links.forEach(link => {
@@ -7,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault(); // Prevent page reload
       const section = link.getAttribute('data-section');
       loadContent(section);
+
+      // Save the selected section in localStorage
+      localStorage.setItem('activeSection', section);
     });
   });
 });
