@@ -28,12 +28,12 @@ html, body {
 nav {
   background-color: #0d1117;
   display: flex;
-  align-items: center;
+  align-items: center;        /* Vertically centers all items, including the logo */
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 0 20px;            /* Reduces top and bottom padding for equal spacing */
   color: white;
-  height: 60px;               /* Define a height if not set already */
-  box-sizing: border-box;     /* Ensures padding doesn’t affect total height */
+  height: 60px;               /* Set consistent height */
+  box-sizing: border-box;
 }
 
 /* Logo inside Navbar */
@@ -41,22 +41,23 @@ nav .logo {
   font-size: 1.8rem;
   font-weight: 700;
   color: white;
-  padding: 5px 10px;          /* Adds space inside the box */
-  border: 2px solid white;    /* Creates a 2px white outline box */
+  padding: 5px 10px;          /* Balanced padding inside the logo */
+  margin-left: 0;             /* Ensure logo sits flush to the left */
+  border: 2px solid white;
   border-radius: 5px;
   display: inline-block;
-  line-height: normal;        /* Ensures text aligns within the box */
+  line-height: 1;             /* Centers text within the logo box */
 }
-
 
 /* Navbar Links */
 nav ul {
   list-style-type: none;
   display: flex;
+  align-items: center;        /* Aligns the links with the logo */
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 20px;          /* Space between links */
 }
 
 nav ul li a {
@@ -65,6 +66,7 @@ nav ul li a {
   font-size: 1.1rem;
   font-weight: 500;
   transition: color 0.3s;
+  line-height: 1;             /* Matches line height with logo */
 }
 
 nav ul li a:hover {
