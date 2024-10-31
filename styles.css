@@ -126,6 +126,35 @@ form button:hover {
   background-color: #1f6feb;
 }
 
+/* Home Section Styling */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid white; /* Adds a 2px white outline around the contents */
+  border-radius: 8px;      /* Optional: rounds the corners slightly */
+  max-width: 700px;        /* Limits the width of the entire box */
+  margin: 20px auto;       /* Centers the box within the page */
+}
+
+#home h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00a896;
+}
+
+#home p {
+  max-width: 600px; 
+  margin: 15px auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #e0f7fa;
+}
+
 /* About Us Section Styling */
 #about {
   display: flex;
@@ -148,6 +177,64 @@ form button:hover {
 }
 
 #about p {
+  max-width: 600px; 
+  margin: 15px auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #e0f7fa;
+}
+
+/* Contact Section Styling */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid white; /* Adds a 2px white outline around the contents */
+  border-radius: 8px;      /* Optional: rounds the corners slightly */
+  max-width: 700px;        /* Limits the width of the entire box */
+  margin: 20px auto;       /* Centers the box within the page */
+}
+
+#contact h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00a896;
+}
+
+#contact p {
+  max-width: 600px; 
+  margin: 15px auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #e0f7fa;
+}
+
+/* Contact Section Styling */
+#services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid white; /* Adds a 2px white outline around the contents */
+  border-radius: 8px;      /* Optional: rounds the corners slightly */
+  max-width: 700px;        /* Limits the width of the entire box */
+  margin: 20px auto;       /* Centers the box within the page */
+}
+
+#services h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00a896;
+}
+
+#services p {
   max-width: 600px; 
   margin: 15px auto;
   line-height: 1.6;
