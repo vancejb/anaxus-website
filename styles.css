@@ -32,18 +32,22 @@ nav {
   justify-content: space-between;
   padding: 10px 20px;
   color: white;
+  height: 60px;               /* Define a height if not set already */
+  box-sizing: border-box;     /* Ensures padding doesn’t affect total height */
 }
 
 /* Logo inside Navbar */
 nav .logo {
   font-size: 1.8rem;
-  font-weight: 700;       /* Slightly bolder to emphasize the brand */
-  color: white;           /* Ensures the text color is white */
-  padding: 5px 10px;      /* Adds space inside the box for a balanced look */
-  border: 2px solid white; /* Creates a 2px white outline box */
-  border-radius: 5px;     /* Adds a slight rounding to the box corners */
-  display: inline-block;  /* Ensures the border wraps tightly around the text */
+  font-weight: 700;
+  color: white;
+  padding: 5px 10px;          /* Adds space inside the box */
+  border: 2px solid white;    /* Creates a 2px white outline box */
+  border-radius: 5px;
+  display: inline-block;
+  line-height: normal;        /* Ensures text aligns within the box */
 }
+
 
 /* Navbar Links */
 nav ul {
